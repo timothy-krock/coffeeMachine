@@ -14,7 +14,7 @@ from time import localtime, strftime
 import sys
 sys.path.append('~/Desktop/coffee/')
 import myjson
-url = 'IM_NOT_GONNA_MAKE_THIS_PUBLIC_SORRY'
+url = 'https://www.notgonnamakethispublic.com/myapikey'
 timer = 0
 
 os.environ['TZ'] = 'US/Central'
@@ -76,20 +76,20 @@ while(1):
             jason = json.loads(myjson.get(url))
             
             
-            if jason['coffee']['coffeeTime'] != '1':
+            if jason['coffeeTime'] != '1':
                 ## UPDATE json.coffee info to include ip address and such
-                jason['coffee']['coffeeTime'] = '0'
-                jason['coffee']['status'] = 'idle'
-                jason['coffee']['ip'] = ip
-                jason['coffee']['updated'] = currentTime
+                jason['coffeeTime'] = '0'
+                jason['status'] = 'idle'
+                jason['ip'] = ip
+                jason['updated'] = currentTime
                 #print 'a:',jason
                 myjson.store(json.dumps(jason), update=url, id_only=True)
             
             elif jason['coffee']['coffeeTime'] == '1':
                 ## UPDATE JSON TO SAY "BREWING"
-                jason['coffee']['status'] = 'brewing'
-                jason['coffee']['updated'] = currentTime
-                jason['coffee']['ip'] = ip
+                jason['status'] = 'brewing'
+                jason['updated'] = currentTime
+                jason['ip'] = ip
                 #print 'b:',jason
                 myjson.store(json.dumps(jason), update=url, id_only=True)
                 makeCoffee()
@@ -102,10 +102,10 @@ while(1):
                 timer = 0
                 ## UPDATE JSON TO SAY IDLE, AND COFFEETIME TO 0
                 jason = json.loads(myjson.get(url))
-                jason['coffee']['coffeeTime'] = '0'
-                jason['coffee']['status'] = 'idle'
-                jason['coffee']['updated'] = currentTime
-                jason['coffee']['ip'] = ip
+                jason['coffeeTime'] = '0'
+                jason['status'] = 'idle'
+                jason['updated'] = currentTime
+                jason['ip'] = ip
                 #print jason
                 myjson.store(json.dumps(jason), update=url, id_only=True)
 
