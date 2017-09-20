@@ -1,4 +1,4 @@
-##I Automated a Coffee Machine!
+**I Automated a Coffee Machine!
 
 I had been looking for a new talking point to tack a Raspberry Pi on for a while, when I ran into a store that had knock-off Keurigs on sale for pretty cheap. This was the perfect thing to attach a Pi to, because automated coffee, who doesn't want that?
 
