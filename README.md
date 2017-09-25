@@ -10,6 +10,6 @@ I was wrong. I got it destroyed, figured out, reassembled, and making coffee in 
 
 The programming connecting the pi to the MYJSON api took me a little longer than expected, but most of that was fidgeting with the rc.local file so that the API watcher starts when the pi boots. 
 
-Going forward, I hope to enable a "queue coffee at X time" function, and I have a Pi sound card that I'd like to turn into a voice command parser, but that's a way down the road. 
+Going forward, I hope to enable a "queue coffee at x time" function, and I have a Pi sound card that I'd like to turn into a voice command parser, but that's a way down the road. 
 
 Thanks for reading, this was a reasonable quick and super fun project, and now I can push a button on my phone and have coffee!
